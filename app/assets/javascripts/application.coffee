@@ -1,0 +1,4 @@
+application.coffee
+
+() ->
+  $(document).foundation()
