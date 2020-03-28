@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @non_player_character.name %>
+</p>
+
+<p>
+  <strong>Hp left:</strong>
+  <%= @non_player_character.hp_left %>
+</p>
+
+<p>
+  <strong>Adventure:</strong>
+  <%= @non_player_character.adventure_id %>
+</p>
+
+<%= link_to 'Edit', edit_non_player_character_path(@non_player_character) %> |
+<%= link_to 'Back', non_player_characters_path %>
