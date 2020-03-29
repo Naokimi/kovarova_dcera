@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_03_28_135219) do
     t.string "load_code"
     t.string "email"
     t.boolean "test"
+    t.integer "player_amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

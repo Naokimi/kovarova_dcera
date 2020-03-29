@@ -5,6 +5,7 @@ class CreateAdventures < ActiveRecord::Migration[6.0]
       t.string :load_code
       t.string :email
       t.boolean :test
+      t.integer :player_amount
 
       t.timestamps
     end
