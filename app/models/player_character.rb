@@ -21,4 +21,9 @@
 #
 class PlayerCharacter < ApplicationRecord
   belongs_to :adventure
+
+  validates :name, presence: true
+  validates :path, presence: true
+  validates :player_name, presence: true
+  validates :race, presence: true
 end
