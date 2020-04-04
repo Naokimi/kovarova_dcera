@@ -15,6 +15,8 @@ class Adventure < ApplicationRecord
   alias_attribute :pcs, :player_characters
   alias_attribute :npcs, :non_player_characters
 
+  validates :player_amount, numericality: { greater_than_or_equal_to: 2, less_than_or_equal_to: 6 }
+
   has_many :player_characters
   has_many :non_player_characters
 end

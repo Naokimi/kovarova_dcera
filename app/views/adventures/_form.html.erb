@@ -1,6 +1,6 @@
 <%= simple_form_for @adventure do |f| %>
-  <%= f.input :email %>
-  <%= f.input :player_amount %>
-  <%= f.input :test %>
-  <%= f.submit %>
+  <%= f.input :email, hint: 'Nebudeme vás spamovat. Pošleme pouze 2 maily: loadovací kód a post-herní statistiky' %>
+  <%= f.input :player_amount, collection: 2..6, label: 'Počet hráčů' %>
+  <%= f.input :test, inline_label: 'Testovací hra', hint: 'Výsledky této hry nebudou počítány do statistik.' %>
+  <%= f.submit 'Potvrdit' %>
 <% end %>
