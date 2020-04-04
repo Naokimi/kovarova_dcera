@@ -3,8 +3,8 @@
 # Table name: player_characters
 #
 #  id           :bigint           not null, primary key
-#  class        :string
 #  name         :string
+#  path         :string
 #  player_name  :string
 #  race         :string
 #  created_at   :datetime         not null

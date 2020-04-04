@@ -1,0 +1,11 @@
+<%= simple_form_for([@adventure , @player_character]) do |f| %>
+  <% @adventure.player_amount.times do |index| %>
+    <div>
+      <h3>Postava č. <%= index + 1 %></h3>
+      <%= f.input :path, label: 'Povolání' %>
+      <%= f.input :race, label: 'Rasa' %>
+      <%= f.input :name, label: 'Jméno postavy' %>
+      <%= f.input :player_name, label: 'Jméno či přezdívka hráče' %>
+    </div>
+  <% end %>
+<% end %>

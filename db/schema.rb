@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_03_28_135219) do
 
   create_table "player_characters", force: :cascade do |t|
     t.string "name"
-    t.string "class"
+    t.string "path"
     t.string "race"
     t.string "player_name"
     t.bigint "adventure_id", null: false
