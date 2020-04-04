@@ -20,4 +20,8 @@
 #
 class NonPlayerCharacter < ApplicationRecord
   belongs_to :adventure
+
+  validates :name, presence: true
+  validates :max_hp, numericality: { greater_than: 0 }
+  validates :hp_left, numericality: { greater_than_or_equal_to: 0 }
 end
