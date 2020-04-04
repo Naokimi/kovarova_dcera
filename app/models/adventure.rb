@@ -17,6 +17,6 @@ class Adventure < ApplicationRecord
 
   validates :player_amount, numericality: { greater_than_or_equal_to: 2, less_than_or_equal_to: 6 }
 
-  has_many :player_characters
-  has_many :non_player_characters
+  has_many :player_characters, dependent: :destroy
+  has_many :non_player_characters, dependent: :destroy
 end

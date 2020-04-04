@@ -1,5 +1,5 @@
 class AdventuresController < ApplicationController
-  before_action :set_adventure, only: [:show, :edit, :update, :destroy]
+  before_action :set_adventure, only: %i[show edit update]
 
   # GET /adventures
   def index
@@ -25,7 +25,7 @@ class AdventuresController < ApplicationController
 
     respond_to do |format|
       if @adventure.save
-        format.html { redirect_to @adventure, notice: 'Začínáme.' }
+        format.html { redirect_to new_adventure_player_character_path(@adventure), notice: 'Začínáme.' }
       else
         format.html { render :new }
       end
@@ -54,6 +54,6 @@ class AdventuresController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def adventure_params
-    params.require(:adventure).permit(:current_chapter, :load_code, :email, :test)
+    params.require(:adventure).permit(:current_chapter, :player_amount, :email, :test)
   end
 end
