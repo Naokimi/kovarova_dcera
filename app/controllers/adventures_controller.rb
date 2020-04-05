@@ -22,6 +22,7 @@ class AdventuresController < ApplicationController
   # POST /adventures
   def create
     @adventure = Adventure.new(adventure_params)
+    NpcCreationService.create_npcs(@adventure)
 
     respond_to do |format|
       if @adventure.save
