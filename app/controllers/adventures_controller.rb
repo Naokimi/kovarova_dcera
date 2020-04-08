@@ -22,10 +22,10 @@ class AdventuresController < ApplicationController
   # POST /adventures
   def create
     @adventure = Adventure.new(adventure_params)
-    NpcCreationService.create_npcs(@adventure)
 
     respond_to do |format|
       if @adventure.save
+        NpcCreationService.create_npcs(@adventure)
         format.html { redirect_to new_adventure_player_character_path(@adventure), notice: 'Začínáme.' }
       else
         format.html { render :new }

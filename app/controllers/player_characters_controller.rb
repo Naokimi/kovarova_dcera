@@ -1,5 +1,5 @@
 class PlayerCharactersController < ApplicationController
-  before_action :set_adventure, only: %i[edit update]
+  before_action :set_adventure, only: %i[new create]
 
   def new
     @player_character = PlayerCharacter.new
