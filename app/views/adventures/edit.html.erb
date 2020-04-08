@@ -1,6 +1,4 @@
-<h1>Editing Adventure</h1>
-
-<%= render 'form', adventure: @adventure %>
-
-<%= link_to 'Show', @adventure %> |
-<%= link_to 'Back', adventures_path %>
+<% case @adventure.current_chapter %>
+<% when 1.1 %>
+  <%= render 'adventures/chapters/na_ceste' %>
+<% end %>
