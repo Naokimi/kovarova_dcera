@@ -1,6 +1,6 @@
 <ul>
-  <%= @adventures.pcs.each do |pc| %>
-    <li><% "#{pc.name}: #{pc.race} #{pc.path} (#{pc.player_name})" %></li>
+  <% @adventure.pcs.each do |pc| %>
+    <li><%= "#{pc.name}: #{pc.race} #{pc.path} (#{pc.player_name})" %></li>
   <% end %>
 </ul>
 
