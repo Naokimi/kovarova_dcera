@@ -2,5 +2,12 @@
   <%= f.input :email, hint: 'Nebudeme vás spamovat. Pošleme pouze 2 maily: loadovací kód a post-herní statistiky' %>
   <%= f.input :player_amount, collection: 2..6, label: 'Počet hráčů' %>
   <%= f.input :test, inline_label: 'Testovací hra', hint: 'Výsledky této hry nebudou počítány do statistik.' %>
+  <h3>Postavy</h3>
+    <%= f.simple_fields_for :player_characters do |player_character| %>
+      <%= render 'player_character_fields', :f => player_character %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add player_character', f, :player_characters %>
+    </div>
   <%= f.submit 'Potvrdit' %>
 <% end %>

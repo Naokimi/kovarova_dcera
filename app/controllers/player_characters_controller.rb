@@ -6,7 +6,6 @@ class PlayerCharactersController < ApplicationController
   end
 
   def create
-    binding.irb
     @player_character = PlayerCharacter.new(player_character_params)
     @player_character.adventure = @adventure
     if @player_character.save

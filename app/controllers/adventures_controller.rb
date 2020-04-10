@@ -26,9 +26,9 @@ class AdventuresController < ApplicationController
 
     respond_to do |format|
       if @adventure.save
-        binding.irb
         NpcCreationService.create_npcs(@adventure)
-        format.html { redirect_to new_adventure_player_character_path(@adventure), notice: 'Začínáme.' }
+        # format.html { redirect_to new_adventure_player_character_path(@adventure) }
+        format.html { redirect_to edit_adventure_path(@adventure) }
       else
         format.html { render :new }
       end

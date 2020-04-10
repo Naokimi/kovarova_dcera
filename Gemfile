@@ -49,6 +49,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Foundation framework and related
 gem 'autoprefixer-rails'
+gem 'cocoon'
 gem 'coffee-rails'
 gem 'foundation-rails'
 gem 'simple_form'
