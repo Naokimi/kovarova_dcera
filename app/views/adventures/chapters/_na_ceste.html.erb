@@ -18,4 +18,7 @@
   <li>Káro: Příběh o vítězství nebo zisku</li>
 </ul>
 <p>Každý hráč následně odvypráví krátký příběh (podle své chuti jej shrne v pár větách, nebo jej může rozvést na pár minut skutečného vyprávění). Ideálně by mělo jít o příběh ukazující minulost jeho postavy popř. její motivace a ambice</p>
-<%= link_to "Pokračovat/Přeskočit", edit_adventure_path(@adventure, adventure: {current_chapter: 1.2}), method: :put %>
+<%= simple_form_for @adventure do |f| %>
+  <%= f.hidden_field :current_chapter, value: 1.2 %>
+  <%= f.submit 'Pokračovat/Přeskočit' %>
+<% end %>

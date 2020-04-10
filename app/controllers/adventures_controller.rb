@@ -22,9 +22,11 @@ class AdventuresController < ApplicationController
   # POST /adventures
   def create
     @adventure = Adventure.new(adventure_params)
+    @adventure.current_chapter = 1.1
 
     respond_to do |format|
       if @adventure.save
+        binding.irb
         NpcCreationService.create_npcs(@adventure)
         format.html { redirect_to new_adventure_player_character_path(@adventure), notice: 'Začínáme.' }
       else
