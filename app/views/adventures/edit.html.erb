@@ -1,3 +1,9 @@
+<ul>
+  <%= @adventures.pcs.each do |pc| %>
+    <li><% "#{pc.name}: #{pc.race} #{pc.path} (#{pc.player_name})" %></li>
+  <% end %>
+</ul>
+
 <% case @adventure.current_chapter %>
 <% when 1.1 %>
   <%= render 'adventures/chapters/na_ceste' %>
