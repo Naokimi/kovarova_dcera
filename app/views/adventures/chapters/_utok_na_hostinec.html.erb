@@ -1,1 +1,21 @@
-_utok_na_hostinec.html.erb
+<h3>1.3 Útok na hostinec</h3>
+<p>Postavy z venku uslyší nějaký postupně sílící bordel (vzdálený křik, bližší křik, štěkot psů, rány atp.)</p>
+<p>Pokud se hned nepůjdou podívat ven, tak po cca 3 kolech vletí do okna hostince šutrák</p>
+<p>V dalším kole někdo rozrazí dveře a začne řvát něco jako “skřeti, útočí skřeti!”</p>
+<p>O kolo později dotyčný dostane zezadu ránu (popř. seknutí do zad nebo tak něco) a padne na zem a dveře zastoupí goblin. Ten se rozhlédne, uvidí přesilu, udělá nějaký bordel (rozbije olejovou lampu, převrátí velký kotlík vařící polévky atp.) a zkusí utéct.</p>
+<p>Scéně vládne chaos a obsahuje tři výzvy:</p>
+<ul>
+  <li>Zorientovat se v dění (nějaké hody na vnímání atp.)</li>
+  <li>Dát okolí nějakou disciplínu (něco uhasit, někomu pomoct, zabarikádovat se… atp.)</li>
+  <li>Relativně lehký, byť potenciálně zrádný, boj s gobliny, kteří vtrhli do hostince</li>
+</ul>
+<p>Co pak udělají postavy?</p>
+
+<%= simple_form_for @adventure do |f| %>
+  <%= f.hidden_field :current_chapter, value: 1.4 %>
+  <%= f.submit 'Zabarikádují se' %>
+<% end %>
+<%= simple_form_for @adventure do |f| %>
+  <%= f.hidden_field :current_chapter, value: 1.5 %>
+  <%= f.submit 'Vyrazí ven' %>
+<% end %>
