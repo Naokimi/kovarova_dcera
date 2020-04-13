@@ -7,6 +7,8 @@
       <%= render 'adventures/chapters/v_hostinci' %>
     <% when 1.3 %>
       <%= render 'adventures/chapters/utok_na_hostinec' %>
+    <% when 1.4 %>
+      <%= render 'adventures/chapters/v_oblezeni' %>
     <% end %>
   </div>
   <div class="cell small-3">
@@ -19,7 +21,7 @@
     <h5>NPC</h5>
     <ul>
       <% @adventure.npcs.each do |npc| %>
-        <li><%= "#{npc.name}: #{npc.hp_left}/#{npc.max_hp}" %></li>
+        <li><%= "#{npc.name}: #{npc.hp_left}/#{npc.max_hp} HP" %></li>
       <% end %>
     </ul>
   </div>
