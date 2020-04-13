@@ -6,7 +6,7 @@
 
 <ul>
   <% @adventure.npcs.each do |npc| %>
-    <li><%= "#{npc.name}: #{hp_left}/#{max_hp}" %></li>
+    <li><%= "#{npc.name}: #{npc.hp_left}/#{npc.max_hp}" %></li>
   <% end %>
 </ul>
 
