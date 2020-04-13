@@ -4,6 +4,12 @@
   <% end %>
 </ul>
 
+<ul>
+  <% @adventure.npcs.each do |npc| %>
+    <li><%= "#{npc.name}: #{hp_left}/#{max_hp}" %></li>
+  <% end %>
+</ul>
+
 <% case @adventure.current_chapter %>
 <% when 1.1 %>
   <%= render 'adventures/chapters/na_ceste' %>
