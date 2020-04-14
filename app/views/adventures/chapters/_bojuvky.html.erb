@@ -3,11 +3,44 @@
 <p>Příklady výjevů:</p>
 <ol>
   <li>Goblin, co se na dvorku snaží naházet slepice do pytle (a moc mu to nejde)</li>
-
+  <li>Goblin, co vběhne za dítětem do stodoly, aby obratem vyběhl ven se vzteklým psem v patách. Zachrání ho až psův “krátký” provaz.</li>
+  <li>Goblin, co s nadšením v očích hází olejovou lampu skrz okno do domu plného lidí</li>
+  <li>Mladá křičící žena vlečená za vlasy ven z domu goblinem, který si do ní občas kopne.</li>
+  <li>Goblin, co vrženou sekyrou dekapituje vzteky syčící kočku.</li>
+  <li>S holí v ruce proti jednomu goblinovi stojící šestnáctiletý mladík, kterého druhý goblin probodne ze zálohy</li>
 </ol>
+<p>Možné činnosti ve scéně</p>
+<ul>
+  <li>Boj s nepřáteli. Nejprve je potřeba nějakého nepřítele doběhnout, nebo ho nechat, aby k vám přiběhl. “Nalezení” nepřítele v boji na blízko vyžaduje nejprve samostatnou akci s úspěšným hod na dovednost proti SO 10. Dovednost určete podle taktiky (doběhnutí nepřítele - Atletika, nadběhnutí nebo počkání si na nepřítele - Skrývání, přeběhnutí po střeše a seskok na nepřítele - Akrobacie, atd.)</li>
+  <li>Střelba. Pokud bude střílející postava příliš nápadná, tak se goblini začnou dříve či později “klidit” z jejího zorného pole.</li>
+  <li>Kouzlení. Pokud někdo sešle silné viditelné kouzlo (nikoliv “pouhý” trik), tak automaticky zastraší 1 dalšího goblina, který kouzlo viděl. Využít lze samozřejmě i různých iluzí a všemožných dalších kouzel - viz níže “další akce”.</li>
+  <li>Zastrašování nepřátel. Kdokoliv kdo vypadá “bojově naladěný” (válečník v plné zbroji, barbar nadšeně se vrhající za nepřáteli atp.) má navíc výhodu.</li>
+  <li>Velení (Přesvědčování). Válečníci (popř. dle úvahy DMa další postavy s vhodnou kombinací pozadí a povolání) si mohou přičíst svůj zdatnostní bonus. Výsledek závisí na přehozené obtížnosti:
+    <ul>
+      <li>10: vesničané odrazí 1 goblina</li>
+      <li>15: vesničané odrazí 2 gobliny</li>
+      <li>20: vesničané odrazí 3 gobliny</li>
+      <li>25: vesničané odrazí 4 gobliny</li>
+    </ul>
+  </li>
+  <li>Orientace v boji - postava může věnovat akci na snahu zorientovat se v celé okolní situaci. Jde o hod na vnímání proti SO 15, přičemž válečníci (popř. dle úvahy DMa další postavy s vhodnou kombinací pozadí a povolání) si mohou přičíst svůj zdatnostní bonus. Pokud postava uspěje, tak:
+    <ul>
+      <li>Získá výhodu v případném hodu na velení (to nemusíte sdělovat a můžete nechat na hráči, zda ho napadne zkoušet velet)</li>
+      <li>Dozví se, že na vesnici nejspíš útočí zhruba <%= @adventure.npcs.size / 25 * 20 %> nepřátel</li>
+      <li>Všimne si, že nepřátelé ignorují kostel (snaha navést utíkající civilisty do kostela sníží počet obětí o 1-4, což se ale nepočítá do počtu podpálených domů)</li>
+      <li>Všimne si, že nepřátelé pronikli do kovárny, ve které se nejspíš (zjevně narozdíl od ostatních domů) také bojuje</li>
+    </ul>
+  </li>
+  <li>Další akce - buďte otevření hráčské kreativitě. Pokud někdo přijde s nějakou nápaditou akcí, která by mohla přinést užitek, podpořte ji a umožněte hráči, aby takovou akcí něčeho dosáhl</li>
+</ul>
 
-Goblin, co vběhne za dítětem do stodoly, aby obratem vyběhl ven se vzteklým psem v patách. Zachrání ho až psův “krátký” provaz.
-Goblin, co s nadšením v očích hází olejovou lampu skrz okno do domu plného lidí
-Mladá křičící žena vlečená za vlasy ven z domu goblinem, který si do ní občas kopne.
-Goblin, co vrženou sekyrou dekapituje vzteky syčící kočku.
-S holí v ruce proti jednomu goblinovi stojící šestnáctiletý mladík, kterého druhý goblin probodne ze zálohy
+<p>Závěr scény</p>
+
+<%= simple_form_for @adventure do |f| %>
+  <%= f.hidden_field :current_chapter, value: 1.6 %>
+  <%= f.submit 'Postavy se vydají do kovárny' %>
+<% end %>
+<%= simple_form_for @adventure do |f| %>
+  <%= f.hidden_field :current_chapter, value: 1.7 %>
+  <%= f.submit 'Útok skončí' %>
+<% end %>
