@@ -26,7 +26,7 @@
   <li>Orientace v boji - postava může věnovat akci na snahu zorientovat se v celé okolní situaci. Jde o hod na vnímání proti SO 15, přičemž válečníci (popř. dle úvahy DMa další postavy s vhodnou kombinací pozadí a povolání) si mohou přičíst svůj zdatnostní bonus. Pokud postava uspěje, tak:
     <ul>
       <li>Získá výhodu v případném hodu na velení (to nemusíte sdělovat a můžete nechat na hráči, zda ho napadne zkoušet velet)</li>
-      <li>Dozví se, že na vesnici nejspíš útočí zhruba <%= @adventure.npcs.size / 25 * 20 %> nepřátel</li>
+      <li>Dozví se, že na vesnici nejspíš útočí zhruba <%= @adventure.npcs.size * 20 / 25 %> nepřátel</li>
       <li>Všimne si, že nepřátelé ignorují kostel (snaha navést utíkající civilisty do kostela sníží počet obětí o 1-4, což se ale nepočítá do počtu podpálených domů)</li>
       <li>Všimne si, že nepřátelé pronikli do kovárny, ve které se nejspíš (zjevně narozdíl od ostatních domů) také bojuje</li>
     </ul>
