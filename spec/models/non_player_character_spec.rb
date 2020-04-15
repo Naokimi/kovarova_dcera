@@ -6,6 +6,7 @@
 #  hp_left      :integer
 #  max_hp       :integer
 #  name         :string
+#  routed       :boolean          default("false")
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  adventure_id :bigint           not null

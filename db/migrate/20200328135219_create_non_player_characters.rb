@@ -4,6 +4,7 @@ class CreateNonPlayerCharacters < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :max_hp
       t.integer :hp_left
+      t.boolean :routed, default: false
       t.references :adventure, null: false, foreign_key: true
 
       t.timestamps

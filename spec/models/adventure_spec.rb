@@ -3,7 +3,7 @@
 # Table name: adventures
 #
 #  id              :bigint           not null, primary key
-#  current_chapter :float
+#  current_chapter :float            default("1.1")
 #  email           :string
 #  load_code       :string
 #  player_amount   :integer

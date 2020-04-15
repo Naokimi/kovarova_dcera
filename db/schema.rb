@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_03_28_135219) do
   enable_extension "plpgsql"
 
   create_table "adventures", force: :cascade do |t|
-    t.float "current_chapter"
+    t.float "current_chapter", default: 1.1
     t.string "load_code"
     t.string "email"
     t.boolean "test"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_03_28_135219) do
     t.string "name"
     t.integer "max_hp"
     t.integer "hp_left"
+    t.boolean "routed", default: false
     t.bigint "adventure_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
