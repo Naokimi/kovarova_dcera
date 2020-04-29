@@ -23,7 +23,12 @@
     <h5>NPC</h5>
     <ul>
       <% @adventure.npcs.each do |npc| %>
-        <li><%= "#{npc.name}: #{npc.hp_left}/#{npc.max_hp} HP" %></li>
+        <!-- <li><%= "#{npc.name}: #{npc.hp_left}/#{npc.max_hp} HP" %></li> -->
+        <li>
+          <%= simple_form_for ([@adventure, npc]) do |f| %>
+            <%= f.input :hp_left %>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>
