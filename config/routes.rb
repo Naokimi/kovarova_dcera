@@ -5,6 +5,6 @@ Rails.application.routes.draw do
             only: %i[index show new create edit update],
             path_names: { edit: 'ongoing_adventure' } do
     resources :player_characters, only: %i[new create]
-    # resources :non_player_characters
+    resources :non_player_characters, only: %i[edit update]
   end
 end
