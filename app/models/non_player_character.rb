@@ -24,5 +24,5 @@ class NonPlayerCharacter < ApplicationRecord
 
   validates :name, presence: true
   validates :max_hp, numericality: { greater_than: 0 }
-  validates :hp_left, numericality: { greater_than_or_equal_to: 0 }
+  validates :hp_left, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: :max_hp }
 end
